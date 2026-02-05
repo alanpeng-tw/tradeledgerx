@@ -1,0 +1,45 @@
+generated: 2026-01-29
+project: TradeLedgerX
+story_location: backend/docs/user-stories
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status: backlog → in-progress → done
+# Story Status: backlog → ready-for-dev → in-progress → done
+
+development_status:
+  # Epics
+  epic-1: backlog
+  epic-2: backlog
+  epic-3: backlog
+  epic-4: backlog
+  epic-5: backlog
+  epic-6: backlog
+  epic-7: backlog
+
+  # Stories
+  # Epic 1: Core Infrastructure
+  1-1-core-infrastructure-setup: backlog
+  1-2-controller-logging-and-db-status: backlog
+  1-3-test-database-connection-endpoint: backlog
+  1-4-password-hash-utility-api: backlog
+
+  # Epic 2: Portfolio Management
+  2-1-multi-account-management: backlog
+  2-2-account-crud-and-status-notes: backlog
+
+  # Epic 3: Tag Management
+  3-1-tag-management: backlog
+
+  # Epic 4: Journaling System
+  4-1-trade-journaling: backlog
+
+  # Epic 5: Risk Management
+  5-1-daily-loss-monitoring: backlog
+
+  # Epic 6: Analytics Dashboard
+  6-1-analytics-dashboard: backlog
+
+  # Epic 7: Settings (Strategy & Broker)
+  7-1-trading-strategy-management: backlog
+  7-2-broker-management: backlog

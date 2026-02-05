@@ -1,0 +1,23 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    # No volume needed for dev; data is ephemeral
+
+  app:
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      - BACKEND_CORS_ORIGINS=["http://localhost:5173","http://127.0.0.1:5173","http://localhost:8081","http://127.0.0.1:8081"]
+      # Redis is in a separate service; use service name as hostname
+      - REDIS_URL=redis://redis:6379
+      # Ensure this matches your MongoDB Atlas config in backend/app/core/config.py
+      # Or override it here if needed
+      #- MONGODB_URL=mongodb+srv://...
+      - PORT=8080
+      # 登入失敗時可在 log 看到 reason=user_not_found 或 password_mismatch
+      - LOG_FILE=/tmp/app.log
+    depends_on:
+      - redis
