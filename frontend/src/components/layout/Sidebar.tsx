@@ -21,6 +21,7 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -34,6 +35,7 @@ interface SidebarProps {
 const menuItems = [
     { text: '儀表板', icon: <HomeIcon />, path: '/dashboard' },
     { text: '交易日誌', icon: <BookIcon />, path: '/journal' },
+    { text: '交易規劃', icon: <AssignmentIcon />, path: '/plans' },
     { text: '數據分析', icon: <BarChartIcon />, path: '/analytics' },
 ];
 

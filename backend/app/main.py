@@ -8,7 +8,7 @@ from app.core.logging_config import setup_logging
 from app.middleware.auth import AuthMiddleware
 from app.middleware.context import AccountContextMiddleware
 from app.middleware.logging_middleware import RequestLoggingMiddleware
-from app.routers import auth, health, portfolio, strategies, brokers, tags, trades, risk, analytics
+from app.routers import auth, health, portfolio, strategies, brokers, tags, trades, risk, analytics, trading_plans
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -46,6 +46,7 @@ app.include_router(tags.router, prefix=settings.API_V1_STR)
 app.include_router(trades.router, prefix=settings.API_V1_STR)
 app.include_router(risk.router, prefix=settings.API_V1_STR)
 app.include_router(analytics.router, prefix=settings.API_V1_STR)
+app.include_router(trading_plans.router, prefix=settings.API_V1_STR)
 
 @app.get("/health")
 async def health_check():
