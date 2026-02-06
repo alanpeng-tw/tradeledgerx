@@ -5,6 +5,7 @@ import JournalPage from './pages/JournalPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import AccountsPage from './pages/AccountsPage';
 import StrategiesPage from './pages/StrategiesPage';
+import TradingPlansPage from './pages/TradingPlansPage';
 import BrokersPage from './pages/BrokersPage';
 import ProtectedRoute from './components/layout/ProtectedRoute';
 import MainLayout from './components/layout/MainLayout';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<HomePage />} />
           <Route path="/journal" element={<JournalPage />} />
+          <Route path="/plans" element={<TradingPlansPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
           <Route path="/accounts" element={<AccountsPage />} />
           <Route path="/settings" element={<Placeholder title="設定" />} />

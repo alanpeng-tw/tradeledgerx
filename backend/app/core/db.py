@@ -6,6 +6,7 @@ from app.models.broker import Broker
 from app.models.strategy import TradingStrategy
 from app.models.tag import Tag
 from app.models.trade import Trade
+from app.models.trading_plan import TradingPlan
 from app.models.user import User
 
 # Module-level client for connectivity checks (set in init_db)
@@ -24,6 +25,7 @@ async def init_db() -> None:
             Tag,
             Trade,
             TradingStrategy,
+            TradingPlan,
         ],
     )
 
